@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,500,0,200" />
+
+    <script defer src="./js/index.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <title>Dev Chopp</title>
+</head>
+
+<body>
+
+    <label class="abrir-modal" for="id-check-modal"><img id="hamburguer-icon" src="./imgs/hamburguer.png"
+            alt="hamburguer icon"></label>
+    <input type="checkbox" id="id-check-modal" class="class-check-modal">
+
+    <div class="modal">
+        <div class="conteudo-modal">
+            <form class="config">
+                <div class="container-chopp">
+                    <div class="title-chopp">Digite qual será o limite de chopp's permitido</div>
+                    <div class="select">
+                        <select name="format" id="select-limite-choop">
+                            <option class="option-value" value="" selected disabled hidden>Escolha uma opção</option>
+                            <option class="option-value" value="5">5</option>
+                            <option class="option-value" value="6">6</option>
+                            <option class="option-value" value="7">7</option>
+                            <option class="option-value" value="8">8</option>
+                            <option class="option-value" value="9">9</option>
+                            <option class="option-value" value="10">10</option>
+                            <option class="option-value" value="11">11</option>
+                            <option class="option-value" value="12">12</option>
+                            <option class="option-value" value="13">13</option>
+                            <option class="option-value" value="14">14</option>
+                            <option class="option-value" value="15">15</option>
+                        </select>
+                    </div>
+
+                    <div class="title-chopp">Digite o valor do chopp</div>
+                    <input  id="input-value-chopp" type="number" inputmode="decimal" step=0.1 class="input-value-chopp" onkeypress="return (event.charCode >= 48 && event.charCode <= 57) ||  
+                    event.charCode == 44 || event.charCode == 0" min="1.00"max="100.00">
+                </div>
+                <div class="container-bottons-config">
+
+                    <button  disabled class="config-save">Salvar</button>
+                    <button disabled class="config-reset">Reset</button>
+                    <button disabled class="exclude-cards">Excluir Cards</button>
+
+                </div>
+                <div class="autor">© 2023 Guilherme Poças Lins SP, All rights reserved.</div>
+            </form>
+
+        </div>
+    </div>
+
+
+    <form class="players">
+        <div class="title-game">
+            <img src="./imgs/felicidades.png" alt="chopp icon">
+            <h1>Dev Chopp</h1>
+        </div>
+        <input class="input-name-player" type="text" placeholder="insira o nome do jogador">
+        <button disabled class="create-player">Criar Jogador</button>
+    </form>
+
+</body>
+
+</html>
